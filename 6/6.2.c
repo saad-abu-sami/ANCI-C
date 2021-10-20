@@ -1,17 +1,15 @@
 #include <stdio.h>
-
-void main()
-{
-   int i,m,j,a=1;
-   printf("Enter a number : ");
-   scanf("%d",&m);
-   for(i=1;i<=m;i++) // if m=3 i<m 1<3;
-   {
-       a=1;
-       for(j=1;j<=i;j++) // i=1 so j=i 1=1;
-       {
-           a=a*j; //so 1*1=1;
-       }// here j++ so j=1+1=2;
-       printf("%d!=\t%d\n",i,a); //1! = 1;
-   } //here i++ so 1+1=2;
+int main(){
+    int i, fact = 1, number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    // we make thats number factorial.
+    // if the number is 6 then its factorial is 6! = 6*5*4*3*2*1 = 120
+    for (i = 1; i <= number; i++){
+        // always factorial starts with 1.
+        //i start with 1 and go untill the number we enter
+        fact = fact * i;
+    }
+    printf("Factorial of %d is: %d", number, fact);
+    return 0;
 }
